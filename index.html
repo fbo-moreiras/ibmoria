@@ -202,21 +202,38 @@
   opacity: 0.95;
 }
 
-/* ================= MOBILE ================= */
+/* ================= FIX REAL MOBILE - MISSÃO ================= */
 @media (max-width: 900px) {
+
+  /* seção volta ao fluxo normal */
   .missao-parallax {
-    background-attachment: scroll;
+    position: relative;
     min-height: auto;
+    height: auto;
+    display: block;
+    background-attachment: scroll;
+    padding: 0;
   }
 
+  /* overlay deixa de ser absoluto */
+  .missao-overlay {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(
+      rgba(5, 20, 60, 0.85),
+      rgba(5, 20, 60, 0.85)
+    );
+  }
+
+  /* conteúdo define a altura da seção */
   .missao-content {
     width: 100%;
     min-height: auto;
-    padding: 80px 30px;
+    padding: 90px 30px 110px;
   }
 }
-
-
 
 
 /* ================= PRIORIDADES ================= */
@@ -407,7 +424,6 @@
   <div class="hero-content">
     <img src="images/logo.png" alt="Igreja Batista Moriá">
     <h1>Um lugar para <span class="typing" id="typing"></span></h1>
-    <button>Venha Cultuar Conosco</button>
   </div>
 </section>
 
